@@ -625,7 +625,7 @@ function wps_mfw_upgrade_pro_popup() {
 
 									$category_name = $instance->get_category_title( $single_target_category_id );
 									?>
-									<option value="<?php echo esc_html( $single_target_category_id ); ?>" <?php selected( $single_target_category_id, $wps_membership_plan_target_categories, true ); ?>><?php echo( esc_html( $category_name ) . '(#' . esc_html( $single_target_category_id ) . ')' ); ?></option>
+									<option value="<?php echo esc_html( $single_target_category_id ); ?>"<?php selected( in_array( $single_target_category_id, $wps_membership_plan_target_categories, true ) ); ?>><?php echo( esc_html( $category_name ) . '(#' . esc_html( $single_target_category_id ) . ')' ); ?></option>
 									<?php
 								}
 							}
